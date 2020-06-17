@@ -66,12 +66,12 @@ Clone this repo
 git clone https://github.com/chiefwigms/picobrew_pico
 ```
 Install needed Dependencies
-Linux
+##### Linux
 ```
 sudo pip3 install -r requirements.txt
 ```
 
-Windows (run as Administrator)
+##### Windows (run as Administrator)
 ```
 pip3 install -r requirements.txt
  ```
