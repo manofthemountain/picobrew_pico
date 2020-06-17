@@ -60,14 +60,44 @@ WebSocket transport not available. Install eventlet or gevent and gevent-websock
 ### Option 2: Running server via Python directly
 Python >= 3.6.9  
 
-#### Setup/Run
-Clone this repo, then run  
-`sudo pip3 install -r requirements.txt` on *nix or `pip3 install -r requirements.txt` as an Administrator in windows  
-`sudo python3 server.py` on *nix or `python3 server.py` as an Administrator in windows
+#### Setup
+Clone this repo
+```
+git clone https://github.com/chiefwigms/picobrew_pico
+```
+Install needed Dependencies
+Linux
+```
+sudo pip3 install -r requirements.txt
+```
+
+Windows (run as Administrator)
+```
+pip3 install -r requirements.txt
+ ```
+
+### Adding your Machine (S/C/Pro/Zymatic/ZSeries/PicoFerm) to your server
+
+Get your GUID from the picobrew.com website.
+  - login to picobrew.com
+  - Go to 'Settings'->'Equipment'
+  - Copy the Product ID value
+
+Add Product ID to config.yaml
+
+### Start the S
+linux
+```
+sudo python3 server.py
+````
+Windows (run as Administrator)
+```
+python3 server.py
+```
 
 ## Manual Recipe Editing
 The table for adding/removing/editing recipe steps has several validation checks in it, but there is always the possiblity of ruining your Pico.  
-  
+
 For Pico S/C/Pro Only: DO NOT EDIT or MOVE Rows 1-3 (Preparing to Brew/Heating/Dough In).  Drain times should all be 0 except for Mash Out (2 minutes) and the last hop addition (5 minutes) (for example, if you only have Hops 1 & 2, set the drain time on Hops 2 to 5, and remove the Hops 3 and 4 rows)
 
 ## Features
