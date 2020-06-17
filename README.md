@@ -7,6 +7,7 @@ Allows for full control of the PicoBrew Pico S/C/Pro & Zymatic models.  Shout ou
 DNS Forwarding (either through a router, RaspberryPi etc)  
   - Have a Raspberry Pi Zero W : https://albeec13.github.io/2017/09/26/raspberry-pi-zero-w-simultaneous-ap-and-managed-mode-wifi/
   - DD-WRT/Open-WRT etc : Add addional dnsmasq options `address=/picobrew.com/<Server IP running this code>`
+  - PiHole: Go to Local DNS Records and add picobrew.com with the IP of your local server to the list.
 
 ### Option 1: Running pre packaged server via Docker
 Docker v19.x (https://docs.docker.com/get-docker/)
