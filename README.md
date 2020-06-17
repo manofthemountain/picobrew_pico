@@ -1,4 +1,4 @@
-# picobrew_pico
+# Picobrew_Pico Local Server
 Allows for full control of the PicoBrew Pico S/C/Pro & Zymatic models.  Shout out to [@hotzenklotz](https://github.com/hotzenklotz/picobrew-server), Brian Moineau for PicoFerm API, @tmack8001 for Z series support & updates.  
 [Demo Server](http://ec2-3-136-112-93.us-east-2.compute.amazonaws.com/)
 
@@ -9,12 +9,14 @@ DNS Forwarding (either through a router, RaspberryPi etc)
   - DD-WRT/Open-WRT etc : Add addional dnsmasq options `address=/picobrew.com/<Server IP running this code>`
   - PiHole: Go to Local DNS Records and add picobrew.com with the IP of your local server to the list.
 
+## Install
+
 ### Option 1: Running pre packaged server via Docker
 Docker v19.x (https://docs.docker.com/get-docker/)
 
 #### Setup/Run
 
-Setup the following directory structure for use by the server.
+Create the following directory structure for use by the server.
 ```
 recipes/
   pico/
@@ -59,14 +61,14 @@ WebSocket transport not available. Install eventlet or gevent and gevent-websock
 ```
 
 ### Option 2: Running server via Python directly
-Python >= 3.6.9  
+Python >= 3.6.9
 
 #### Setup
-Clone this repo
+Clone the repo
 ```
 git clone https://github.com/chiefwigms/picobrew_pico
 ```
-Install needed Dependencies
+Install Dependencies
 ##### Linux
 ```
 sudo pip3 install -r requirements.txt
@@ -76,15 +78,6 @@ sudo pip3 install -r requirements.txt
 ```
 pip3 install -r requirements.txt
  ```
-
-### Adding your PicoBrew Machine to your local server
-
-1. Get your GUID from the picobrew.com website.
-  - Log into picobrew.com
-  - Go to 'Settings'->'Equipment'
-  - Copy the Product ID value
-
-2. Add Product ID value to config.yaml located in the picobrew_pico main directory.
 
 ### Start the Server
 Ensure you are in the picobrew_pico directory
@@ -99,7 +92,7 @@ python3 server.py
 ```
 
 ## Manual Recipe Editing
-The table for adding/removing/editing recipe steps has several validation checks in it, but there is always the possiblity of ruining your Pico.  
+The table for adding/removing/editing recipe steps has several validation checks in it, but there is always the possibility of bricking 'ruining' your Pico.  
 
 For Pico S/C/Pro Only: DO NOT EDIT or MOVE Rows 1-3 (Preparing to Brew/Heating/Dough In).  Drain times should all be 0 except for Mash Out (2 minutes) and the last hop addition (5 minutes) (for example, if you only have Hops 1 & 2, set the drain time on Hops 2 to 5, and remove the Hops 3 and 4 rows)
 
