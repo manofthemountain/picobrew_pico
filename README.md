@@ -76,21 +76,23 @@ Windows (run as Administrator)
 pip3 install -r requirements.txt
  ```
 
-### Adding your Machine (S/C/Pro/Zymatic/ZSeries/PicoFerm) to your server
+### Adding your PicoBrew Machine to your local server
 
-Get your GUID from the picobrew.com website.
-  - login to picobrew.com
+1. Get your GUID from the picobrew.com website.
+  - Log into picobrew.com
   - Go to 'Settings'->'Equipment'
   - Copy the Product ID value
 
-Add Product ID to config.yaml
+2. Add Product ID value to config.yaml located in the picobrew_pico main directory.
 
-### Start the S
-linux
+### Start the Server
+Ensure you are in the picobrew_pico directory
+
+On Linux/Unix Based systems
 ```
 sudo python3 server.py
 ````
-Windows (run as Administrator)
+On Windows (run as Administrator)
 ```
 python3 server.py
 ```
